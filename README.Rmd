@@ -12,5 +12,6 @@ Open Data Science course offered by UH provides a hands-on introduction to stati
 
 ### My IODS project diary
 
-Link to my IODS project directory  [here](https://github.com/nkrish2014/IODS-project)
+Link to my IODS project directory  [here]( https://nkrish2014.github.io/IODS-project/)
+
 
