@@ -1,4 +1,10 @@
 
 # About the project
 
-*Write a short description about the course and add a link to your github repository here. This is an R markdown (.Rmd) file so you can use R markdown syntax. See the 'Useful links' page in the mooc area (chapter 1) for instructions.*
+This page is made as a part of my work in the Introduction to Open Data Science (IODS) course offered by University of Helsinki in Spring 2017.
+
+Introduction to Open Data Science course provides a hands-on introduction to statistical methods using the language R. The course material and the contact classes provide an invaluable support to learn this topic. I am not only learning the material but also loving it.
+
+A warm thanks to the course instructor and his support team for teaching  this  excellent course.
+
+My github directory for the IODS project is [here](https://github.com/nkrish2014/IODS-project/)

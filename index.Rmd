@@ -1,8 +1,10 @@
 ---
 title: "IODS course project"
+author: "Krishnan Narayanan"
 output:
   html_document:
-    theme: cosmo
+    theme: spacelab
+    highlight: tango
     toc: true
     toc_depth: 2
     fig_caption: true

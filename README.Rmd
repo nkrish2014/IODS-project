@@ -1,0 +1,16 @@
+---
+title: "README.Rmd"
+author: "Krishnan Narayanan"
+date: "January 27, 2017"
+output: html_document
+---
+
+
+## Introduction to Open Data Science, University of Helsinki, spring 2017
+
+Open Data Science course offered by UH provides a hands-on introduction to statistical methods using the language R. The course material and the contact classes provide an invaluable support to learn this topic.
+
+### My IODS project diary
+
+Link to my IODS project directory  [here](https://github.com/nkrish2014/IODS-project)
+

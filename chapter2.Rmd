@@ -1,7 +1,14 @@
-# Insert chapter 2 title here
+# IODS project diary
 
-*Describe the work you have done this week and summarize your learning.*
+The link to my IODS project diary is [here](https://nkrish2014.github.io/IODS-project/)
 
-- Describe your work and results clearly. 
-- Assume the reader has an introductory course level understanding of writing and reading R code as well as statistical methods
-- Assume the reader has no previous knowledge of your data or the more advanced methods you are using  
+
+#### Week 2
+
+* Setup the IODS project directory in github
+* Completed DataCamp R Short and Sweet, a brief intro to R
+* Attended the workshop, started doing the DataCamp: Regression and model validation
+* Completed RStudio exercise 1
+
+
+
