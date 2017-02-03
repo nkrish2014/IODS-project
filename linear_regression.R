@@ -1,8 +1,6 @@
 # Krishnan Narayanan 03.02.2017
 # Rstudio exercise 2: Regression and model validation
 
-## Analysis
-
 
 ## Analysis 
 # Loading the libraries for the plots

@@ -2,6 +2,7 @@
 # Rstudio exercise 2: Regression and model validation
 ## Data wrangling - Creating the data frame for linear regression 
 
+
 # Access the dplyr library
 library(dplyr)
 
