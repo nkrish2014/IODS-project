@@ -1,7 +1,95 @@
-# Insert chapter 2 title here
+# Week 2: Rstudio Exercise 2 -  Regression and model validation
 
-*Describe the work you have done this week and summarize your learning.*
+To develop the linear regression model we use the data, learn2014, is created using the R script in the Data wrangling exercise from the original data  learning2014 available at http://www.helsinki.fi/~kvehkala/JYTmooc/JYTOPKYS3-data.txt.
 
-- Describe your work and results clearly. 
-- Assume the reader has an introductory course level understanding of writing and reading R code as well as statistical methods
-- Assume the reader has no previous knowledge of your data or the more advanced methods you are using  
+The dataframe learn2014 has 166 observations and 7 variables.
+
+In the first figure below, the graphical overview of the data variables, their distributions and relationships  are given. The colours in the plot is based on gender.  The correlation between variables shows that the variable "attitude" is highly correlated to "points". The next two variables correlated to "points" are "stra" and "surf" considering the absolute value of the correlation. 
+
+So we develop a linear regression model, my_model3, with three variables with the formula "points ~ attitude + stra + surf". The summary of the my_model3 gives the coefficients of the variables and the Residual standard error as 5.296. The p-value is 3.156e-08.
+
+Next we model my_model2 with two variables attitude and stra. The summary of the my_model3 gives the coefficients of the variables and the Residual standard error as 5.289. The p-value is 7.734e-09.
+
+As the residual error is smaller for my_model 2 and it has a p-value smaller than that of my_model3, we choose my_model2.
+
+
+The plots show the Residuals vs Fitted values, Normal QQ-plot and Residuals vs Leverage. These plots provide adequate justification for the assumptions taken for the regression model. The Residuals vs Fitted values are well clustered to suggest that the errors do not grow with the size of the data.
+
+The normal QQ plot is linear suggesting that the normality assumption about the errors are justified. The residual vs leverage plot shows that the outliers do not impact the model.
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r echo=TRUE}
+## Analysis 
+# Loading the libraries for the plots
+
+library(GGally)
+library(ggplot2)
+
+# loading the data from the file learning2014.txt created by  
+# the Data wrangling exercise
+
+learn2014 <- read.table("learning2014.txt", sep="\t", header=TRUE)
+
+# the dataframe learn2014 has 166 observations and 7 variables
+
+str(learn2014)
+
+dim(learn2014)
+
+head(learn2014)
+
+# The graphical overview of the data variables, their distributions and relationships. 
+# the colours in the plot is based on gender
+
+p <- ggpairs(learn2014, mapping = aes(col = gender), lower = list(combo = wrap("facethist", bins = 20)))
+
+# show  the plot of correlation of variables
+p
+
+
+
+# model fitting with three variables.
+# The three variables which have highest absolute correlation values with 
+# points are chosen from the plot p. These variables are attitude, stra and surf.
+# The summary of my_model3 gives
+
+# Residual standard error: 5.296 on 162 degrees of freedom
+# Multiple R-squared:  0.2074,	Adjusted R-squared:  0.1927 
+# F-statistic: 14.13 on 3 and 162 DF,  p-value: 3.156e-08
+# From the summary the t value for surf is quite small compared to
+# the t values of the other two variables
+
+my_model3 <- lm(points ~ attitude + stra + surf, data = learn2014)
+summary(my_model3)
+
+
+# model fitting with two variables: attitude and stra as stra has a higher correlation 
+# to points compared to surf
+# The summary of the model gives
+# Residual standard error: 5.289 on 163 degrees of freedom
+# Multiple R-squared:  0.2048,	Adjusted R-squared:  0.1951 
+# F-statistic: 20.99 on 2 and 163 DF,  p-value: 7.734e-09
+
+my_model2 <- lm(points ~ attitude + stra, data = learn2014)
+summary(my_model2)
+
+# We plot the graphs  Residuals vs Fitted values, Normal QQ-plot and Residuals vs Leverage.
+par(mfrow = c(2,2))
+plot(my_model2, which = c(1,2,5), caption = list("Residuals vs Fitted values", "Normal QQ-plot", "Residuals vs Leverage"))
+
+
+
+
+
+
+
+```
+
+
+  
