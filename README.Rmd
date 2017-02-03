@@ -1,28 +1,17 @@
 ---
 title: "README.Rmd"
+author: "Krishnan Narayanan"
+date: "January 27, 2017"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
-## R Markdown
+## Introduction to Open Data Science, University of Helsinki, spring 2017
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+Open Data Science course offered by UH provides a hands-on introduction to statistical methods using the language R. The course material and the contact classes provide an invaluable support to learn this topic.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+### My IODS project diary
 
-```{r cars}
-summary(cars)
-```
+Link to my IODS project directory  [here]( https://nkrish2014.github.io/IODS-project/)
 
-## Including Plots
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
