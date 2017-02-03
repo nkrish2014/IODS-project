@@ -23,9 +23,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-
 ```{r echo=TRUE}
-## Analysis 
+## Analysis  Linear Regression 
 # Loading the libraries for the plots
 
 library(GGally)
